@@ -1,0 +1,4 @@
+<li>
+    <button  class="done" *ngIf="!completed" (click)="completeTask()">Complete</button> 
+    <span [ngClass]="{'line-through': completed}"  (click)="changeTask()">{{task}}</span>     
+</li>

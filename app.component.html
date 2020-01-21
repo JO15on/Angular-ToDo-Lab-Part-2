@@ -1,0 +1,16 @@
+<div>
+  <h1>TODO List</h1>
+  <p>A place to store your todos</p>
+
+  <input [(ngModel)]="searchText" name="search" placeholder="Filter your to-dos"/>
+
+  <ol>  
+   <ng-container *ngFor="let todo of (todos | filterSearch:searchText); let i = index">  
+     <todo [completed]="todo.completed" [task]="todo.task"></todo> 
+     <button class="x" (click)="removeTask(i)">X</button>
+   </ng-container>
+  </ol>
+
+  <input #newTodo placeholder="Add your to-do" (keyup.enter)="addTask(newTodo.value)" />
+  <button class="Add" (click)="addTask(newTodo.value)">Add</button>
+</div>

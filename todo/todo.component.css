@@ -1,0 +1,10 @@
+.done {
+    border-color: #F194C4;
+    color: #F194C4;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
